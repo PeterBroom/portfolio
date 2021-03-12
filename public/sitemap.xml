@@ -32,4 +32,8 @@
         <loc>https://petebroom.netlify.app/search-index.json</loc>
         <lastmod>2021-03-12</lastmod>
     </url>
+    <url>
+        <loc>https://petebroom.netlify.app/admin/</loc>
+        <lastmod>2021-03-12</lastmod>
+    </url>
 </urlset>
