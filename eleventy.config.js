@@ -83,6 +83,9 @@ module.exports = config => {
     config.addLayoutAlias('category', 'layouts/category.njk')
     config.addLayoutAlias('search', 'layouts/search.njk')
 
+    // Include admin
+    config.addPassthroughCopy("admin");
+
     // Include our static assets
     config.addPassthroughCopy('css')
     config.addPassthroughCopy('js')
