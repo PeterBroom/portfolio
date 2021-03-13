@@ -24,7 +24,7 @@ collections:
     files:
       - label: "Globals"
         name: headerGlobals
-        file: "globals/headerGlobals.yml"
+        file: "site/globals/headerGlobals.yml"
         fields:
           - label: "Site title"
             name: "siteTitle"
@@ -34,7 +34,7 @@ collections:
             field: {label: Name, name: name, widget: string}
       - label: "Meta data"
         name: headerMeta
-        file: "globals/headerMeta.yml"
+        file: "site/globals/headerMeta.yml"
         fields:
           - label: "Meta description"
             name: "description"
@@ -52,7 +52,7 @@ collections:
 
       - label: "Navigation Menu"
         name: headerNav
-        file: "globals/headerNav.yml"
+        file: "site/globals/headerNav.yml"
         fields:
           - label: "Nav Items"
             label_singular: "Nav Item"
@@ -64,7 +64,7 @@ collections:
 
       - label: "Footer Menu"
         name: footerNav
-        file: "globals/footerNav.yml"
+        file: "site/globals/footerNav.yml"
         fields:
           - label: "Nav Items"
             label_singular: "Nav Item"
@@ -78,7 +78,7 @@ collections:
     label: "Pages"
     label_singular: "Page"
     title: Page
-    folder: "pages"
+    folder: "site/pages"
     create: true
     nested:
       depth: 6 # max depth to show in the collection tree
@@ -92,7 +92,7 @@ collections:
           label: "Layout",
           name: "layout",
           widget: "hidden",
-          default: "includes/layouts/page.njk",
+          default: "site/includes/layouts/page.njk",
         }
       - {
           label: "Permalink",
