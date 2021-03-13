@@ -219,6 +219,12 @@ collections:
             widget: object
             fields:
               - { label: "Heading", name: heading, widget: string }
+              - { label: "Image", name: image, widget: image,
+                  media_library: {
+                    name: cloudinary,
+                    output_filename_only: true
+                  }
+                }
               - {
                   label: "Content",
                   name: content,
