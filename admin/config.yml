@@ -74,11 +74,11 @@ collections:
               - { label: "Display Text", name: displayText, widget: string }
               - { label: URL, name: url, widget: string }
 
-  - name: pages
-    label: Pages
+  - name: "pages"
+    label: "Pages"
     label_singular: "Page"
     title: Page
-    folder: pages
+    folder: "pages"
     create: true
     nested:
       depth: 6 # max depth to show in the collection tree
