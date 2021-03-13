@@ -95,6 +95,9 @@ module.exports = config => {
 
     return {
         markdownTemplateEngine: 'njk',
+        templateFormats:        ['md', 'njk'],
+        htmlTemplateEngine:     'njk',
+        passtroughFileCopy:     true,
         dir: {
             input: 'site',
             output: 'public',
