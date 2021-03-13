@@ -23,7 +23,7 @@ collections:
     files:
       - label: "Globals"
         name: headerGlobals
-        file: "_data/headerGlobals.yml"
+        file: "globals/headerGlobals.yml"
         fields:
           - label: "Site title"
             name: "siteTitle"
@@ -33,7 +33,7 @@ collections:
             field: {label: Name, name: name, widget: string}
       - label: "Meta data"
         name: headerMeta
-        file: "_data/headerMeta.yml"
+        file: "globals/headerMeta.yml"
         fields:
           - label: "Meta description"
             name: "description"
@@ -51,7 +51,7 @@ collections:
 
       - label: "Navigation Menu"
         name: headerNav
-        file: "_data/headerNav.yml"
+        file: "globals/headerNav.yml"
         fields:
           - label: "Nav Items"
             label_singular: "Nav Item"
