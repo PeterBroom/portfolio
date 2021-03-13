@@ -63,7 +63,7 @@ collections:
 
       - label: "Footer Menu"
         name: footerNav
-        file: "_data/footerNav.yml"
+        file: "globals/footerNav.yml"
         fields:
           - label: "Nav Items"
             label_singular: "Nav Item"
