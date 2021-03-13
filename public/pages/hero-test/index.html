@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Search | Skeleventy</title>
+    <title>Hero test | Skeleventy</title>
 
     
     
@@ -14,26 +14,26 @@
     <script src="/js/main.js" defer></script>
 
     
-    <meta name="description" content="Search page">
+    <meta name="description" content="Skeleventy gives you a rock solid foundation to build fast and accessible static websites.">
     <meta name="format-detection" content="telephone=no">
     <meta name="robots" content="index,follow" />
-    <link rel="canonical" href="https://petebroom.netlify.app/search/">
+    <link rel="canonical" href="https://petebroom.netlify.app/pages/hero-test/">
 
     
     
 
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Search | Skeleventy">
-<meta name="twitter:description" content="Search page">
+<meta name="twitter:title" content="Hero test | Skeleventy">
+<meta name="twitter:description" content="Skeleventy gives you a rock solid foundation to build fast and accessible static websites.">
 <meta name="twitter:site" content="@joe_dyer1">
 <meta name="twitter:creator" content="@joe_dyer1">
 <meta name="twitter:image:src" content="https://petebroom.netlify.app/images/meta/twitter.jpg">
 
 
-<meta name="og:title" content="Search | Skeleventy">
-<meta name="og:description" content="Search page">
+<meta name="og:title" content="Hero test | Skeleventy">
+<meta name="og:description" content="Skeleventy gives you a rock solid foundation to build fast and accessible static websites.">
 <meta name="og:image" content="https://petebroom.netlify.app/images/meta/og.jpg">
-<meta name="og:url" content="https://petebroom.netlify.app/search/">
+<meta name="og:url" content="https://petebroom.netlify.app/pages/hero-test/">
 <meta name="og:site_name" content="Skeleventy">
 <meta name="og:locale" content="en_GB">
 <meta name="og:type" content="website">
@@ -46,7 +46,7 @@
 </head>
 
 
-<body id="page-search" class="type-search page-search bg-primary color-white font-base leading-normal">
+<body id="page-hero-test" class="type-page page-hero-test bg-primary color-white font-base leading-normal">
 
     <a class="sr-only" href="#main">Skip to content</a>
 
@@ -74,7 +74,7 @@
 
             <li class="item">
 
-                <a href="/pages/hero-test/" class="link box-block color-white text-400 weight-bold pl-300 pr-300 " >Hero test</a>
+                <a href="/pages/hero-test/" class="link box-block color-white text-400 weight-bold pl-300 pr-300 active" aria-current=page>Hero test</a>
 
             </li>
 
@@ -98,7 +98,7 @@
 
             <li class="item">
 
-                <a href="/search/" class="link box-block color-white text-400 weight-bold pl-300 pr-300 active" aria-current=page>Search</a>
+                <a href="/search/" class="link box-block color-white text-400 weight-bold pl-300 pr-300 " >Search</a>
 
             </li>
 
@@ -122,7 +122,11 @@
 
         <header class="page-header">
 
-            <h1 class="page-title">Search</h1>
+            <h1 class="page-title">Hero test</h1>
+
+            
+
+                <p class="sub-heading">Let&#39;s see if these images work?</p>
 
             
 
@@ -130,83 +134,14 @@
 
         <div class="content flow">
 
-            <div class="field">
-                <label for="searchField">Search</label>
-                <input class="search-page-input" type="search" placeholder="Search..." id="searchField"/>
-            </div>
-            <ol id="searchResults"></ol>
-            <div id="noResultsFound" style="display: none">
-                <p>No results found.</p>
-            </div>
-            <!--Only 5.7kb GZipped. You may want to bundle this with your application code. -->
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/elasticlunr/0.9.6/elasticlunr.min.js"></script>
-            <script>
-                (function (window, document) {
-                    "use strict";
+            
 
-                    const searchInputPage = document.querySelector('.search-page-input');
-                    const searchInputHeader = document.querySelector('.header-search');
-
-                    const search = (e) => {
-                        const results = window
-                            .searchIndex
-                            .search(e.target.value, {
-                                bool: "OR",
-                                expand: true,
-                                fields: {
-                                    title: {
-                                        boost: 3
-                                    },
-                                    meta_keywords: {
-                                        boost: 2
-                                    },
-                                    meta_description: {
-                                        boost: 1
-                                    }
-                                }
-                            });
-
-                        const resEl = document.getElementById("searchResults");
-                        const noResultsEl = document.getElementById("noResultsFound");
-
-                        resEl.innerHTML = "";
-                        if (results) {
-                            noResultsEl.style.display = "none";
-                            results.map((r) => {
-                                const {id, title, description} = r.doc;
-                                const el = document.createElement("li");
-                                resEl.appendChild(el);
-
-                                const h3 = document.createElement("h3");
-                                el.appendChild(h3);
-
-                                const a = document.createElement("a");
-                                a.setAttribute("href", id);
-                                a.textContent = title;
-                                h3.appendChild(a);
-
-                                const p = document.createElement("p");
-                                p.textContent = description;
-                                el.appendChild(p);
-                            });
-                        } else {
-                            noResultsEl.style.display = "block";
-                        }
-                    };
-
-                    fetch("/search-index.json").then((response) => response.json().then((rawIndex) => {
-                        window.searchIndex = elasticlunr
-                            .Index
-                            .load(rawIndex);
-                        searchInputPage.addEventListener("input", search);
-                    }));
-                })(window, document);
-            </script>
         </div>
 
     </article>
 
 </main>
+
 
         
         
@@ -280,7 +215,7 @@
 
         <li class="item">
 
-            <a href="/pages/hero-test/" class="link box-block color-white text-600 " >Hero test</a>
+            <a href="/pages/hero-test/" class="link box-block color-white text-600 active" aria-current=page>Hero test</a>
 
         </li>
 
@@ -304,7 +239,7 @@
 
         <li class="item">
 
-            <a href="/search/" class="link box-block color-white text-600 active" aria-current=page>Search</a>
+            <a href="/search/" class="link box-block color-white text-600 " >Search</a>
 
         </li>
 
