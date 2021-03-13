@@ -7,6 +7,11 @@ const { srcset, src } = require('./shortcodes');
 const path = require('path')
 
 module.exports = config => {
+    config.addLayoutAlias('default', 'layouts/base.njk')
+
+    // Global collection
+    config.addDataExtension('yaml', contents => yaml.safeLoad(contents))
+    config.addDataExtension("yml", contents => yaml.load(contents));
 
     // CDN
     config.addShortcode('src', src);
