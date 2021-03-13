@@ -37,7 +37,7 @@ module.exports = config => {
 
     // Page collection
     config.addCollection('pages', collection => {
-        return [...collection.getFilteredByGlob('site/pages/**/*.md')];
+        return [...collection.getFilteredByGlob('./site/pages/**/*.md')];
     });
 
     // Blog collection
@@ -89,7 +89,7 @@ module.exports = config => {
     config.addLayoutAlias('search', 'layouts/search.njk')
 
     // Include admin
-    config.addPassthroughCopy("admin");
+    config.addPassthroughCopy('admin');
 
     // Include our static assets
     config.addPassthroughCopy('css')
