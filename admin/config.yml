@@ -78,7 +78,7 @@ collections:
     label: "Pages"
     label_singular: "Page"
     title: Page
-    folder: "site/pages"
+    folder: "pages"
     create: true
     nested:
       depth: 6 # max depth to show in the collection tree
