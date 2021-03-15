@@ -2,13 +2,13 @@ backend:
   # repo: https://github.com/PeterBroom/portfolio.git
   name: git-gateway
   branch: main
-  commit_messages:
-    create: Create {{collection}} “{{slug}}”
-    update: Update {{collection}} “{{slug}}”
-    delete: Delete {{collection}} “{{slug}}”
-    uploadMedia: Upload “{{path}}”
-    deleteMedia: Delete “{{path}}”
-    openAuthoring: '{{message}}'
+  # commit_messages:
+  #   create: Create {{collection}} “{{slug}}”
+  #   update: Update {{collection}} “{{slug}}”
+  #   delete: Delete {{collection}} “{{slug}}”
+  #   uploadMedia: Upload “{{path}}”
+  #   deleteMedia: Delete “{{path}}”
+  #   openAuthoring: '{{message}}'
 local_backend: true
 # publish_mode: editorial_workflow
 media_folder: "public/images/uploads"
@@ -34,7 +34,7 @@ collections:
             field: {label: Name, name: name, widget: string}
       - label: "Meta data"
         name: headerMeta
-        file: "site/globals/headerMeta.yml"
+        file: "_data/headerMeta.yml"
         fields:
           - label: "Meta description"
             name: "description"
@@ -78,7 +78,7 @@ collections:
     label: "Pages"
     label_singular: "Page"
     title: Page
-    folder: "./site/pages"
+    folder: "site/pages"
     create: true
     nested:
       depth: 6 # max depth to show in the collection tree
