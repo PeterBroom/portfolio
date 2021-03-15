@@ -5,6 +5,7 @@ permalink: hero-test/index.html
 title: "Hero page test "
 sub_heading: Let's see if these images work?
 date: 2021-03-15T15:10:11.768Z
+permalink: /hero-test/index.html
 eleventyNavigation:
   key: Hero test
   order: 1
