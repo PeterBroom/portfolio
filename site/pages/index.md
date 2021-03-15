@@ -1,5 +1,4 @@
 ---
-layout: site/includes/layouts/page.njk
 permalink: /
 title: Peter Broom
 sub_heading: Front-end web developer
