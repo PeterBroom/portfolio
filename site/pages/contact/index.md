@@ -7,7 +7,7 @@ date: 2021-03-15T16:18:02.213Z
 blocks:
   - type: hero
     heading: Contact hero test 2
-    image: https://res.cloudinary.com/peterbroom/image/upload/v1615571028/783px-Test-Logo.svg_nkdkl8.png
+    image: https://res.cloudinary.com/peterbroom/image/upload/v1599782643/sample.jpg
     content: Some contact info
 eleventyNavigation:
   key: Contact
