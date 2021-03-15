@@ -24,7 +24,7 @@ collections:
     files:
       - label: "Globals"
         name: headerGlobals
-        file: "site/globals/headerGlobals.yml"
+        file: "_data/headerGlobals.yml"
         fields:
           - label: "Site title"
             name: "siteTitle"
@@ -52,7 +52,7 @@ collections:
 
       - label: "Navigation Menu"
         name: headerNav
-        file: "site/globals/headerNav.yml"
+        file: "_data/headerNav.yml"
         fields:
           - label: "Nav Items"
             label_singular: "Nav Item"
@@ -64,7 +64,7 @@ collections:
 
       - label: "Footer Menu"
         name: footerNav
-        file: "site/globals/footerNav.yml"
+        file: "_data/footerNav.yml"
         fields:
           - label: "Nav Items"
             label_singular: "Nav Item"
