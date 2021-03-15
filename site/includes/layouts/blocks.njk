@@ -1,0 +1,8 @@
+{% for block in blocks %}
+    {% if block.type == 'hero' and block.content != '' %}
+        {% include "components/hero.njk" %}
+    {% endif %}
+    {% if block.type == 'textBlock' %}
+        {% include "components/text-block.njk" %}
+    {% endif %}
+{% endfor %}
