@@ -2,7 +2,7 @@ const navigation = require('@11ty/eleventy-navigation')
 const dates = require('./utilities/filters/dates')
 const helpers = require('./utilities/filters/helpers')
 const searchFilter = require('./utilities/filters/search')
-const { srcset, src } = require('./shortcodes');
+const { srcset, src } = require('./utilities/shortcodes/shortcodes');
 
 const path = require('path')
 
@@ -14,8 +14,8 @@ module.exports = config => {
     config.addDataExtension("yml", contents => yaml.load(contents));
 
     // CDN
-    config.addShortcode('src', src);
-    config.addShortcode('srcset', srcset);
+    config.addNunjucksShortcode('src', src);
+    config.addNunjucksShortcode('srcset', srcset);
 
     // navigation plugin
     config.addPlugin(navigation)
