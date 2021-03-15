@@ -1,4 +1,5 @@
 ---
+layout: page
 permalink: index.html
 title: Peter Broom
 sub_heading: Front-end web developer
