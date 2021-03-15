@@ -14,6 +14,7 @@ function getSrcset(file, widths) {
 function getSrc(file, width) {
   return `${BASE_URL}q_auto,f_auto,w_${width ? width : FALLBACK_WIDTH}/${FOLDER}/${file}`
 }
+
 module.exports = {
   srcset: (file, widths) => getSrcset(file, widths),
   src: (file, width) => getSrc(file, width),

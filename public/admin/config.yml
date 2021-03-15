@@ -18,7 +18,6 @@ media_library:
   config:
     cloud_name: peterbroom
     api_key: 378533634851541
-    output_filename_only: true
 collections:
   - label: "Sitewide Options"
     name: options
@@ -118,7 +117,9 @@ collections:
               - { label: "Image", name: image, widget: image,
                   media_library: {
                     name: cloudinary,
-                    output_filename_only: true
+                    config: {
+                      output_filename_only: true
+                    }
                   }
                 }
               - {
