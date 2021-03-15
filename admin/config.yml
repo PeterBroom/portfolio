@@ -78,7 +78,7 @@ collections:
     label: "Pages"
     label_singular: "Page"
     title: Page
-    folder: "site/pages"
+    folder: "./site/pages"
     create: true
     nested:
       depth: 6 # max depth to show in the collection tree
@@ -92,7 +92,7 @@ collections:
           label: "Layout",
           name: "layout",
           widget: "hidden",
-          default: "site/includes/layouts/page.njk",
+          default: "./site/includes/layouts/page.njk",
         }
       - {
           label: "Permalink",
