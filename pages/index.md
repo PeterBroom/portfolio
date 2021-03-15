@@ -2,7 +2,7 @@
 layout: ./site/includes/layouts/page.njk
 permalink: /
 title: Peter Broom
-sub_heading: Front-end web developer
+sub_heading: "Front-end web developer "
 date: 2021-03-15T15:05:07.614Z
 blocks:
   - type: hero
