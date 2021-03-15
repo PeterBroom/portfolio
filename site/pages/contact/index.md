@@ -4,7 +4,7 @@ meta_title: Contact
 meta_description: The contact page
 title: Get in touch
 sub_heading: We'd love to hear from you.
-permalink: /contact/index.html
+permalink: contact/index.html
 eleventyNavigation:
   key: Contact
   order: 4

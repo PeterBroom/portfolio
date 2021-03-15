@@ -4,7 +4,7 @@ meta_title: About
 meta_description: About Skeleventy
 title: About
 sub_heading: Skeleventy is more opinionated than your typical 'barebones' starter kit. It's minimal design is a good basis to build upon for your blog or portfolio.
-permalink: /about/index.html
+permalink: about/index.html
 eleventyNavigation:
   key: About
   order: 2
