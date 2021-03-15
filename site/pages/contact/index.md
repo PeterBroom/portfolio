@@ -7,7 +7,7 @@ date: 2021-03-15T16:18:02.213Z
 blocks:
   - type: hero
     heading: Contact hero test 2
-    image: /images/uploads/sea-turtle.mp4
+    image: /images/uploads/landscape-panorama.jpg
     content: Some contact info
 eleventyNavigation:
   key: Contact
