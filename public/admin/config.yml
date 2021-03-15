@@ -95,7 +95,7 @@ collections:
           default: "./site/includes/layouts/page.njk",
         }
       - {
-          label: "Permalink",
+          label: "Permalinkage",
           name: "permalink",
           widget: "string",
           required: true,
