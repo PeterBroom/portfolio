@@ -158,6 +158,12 @@ collections:
         required: false
         widget: "boolean"
         default: false
+      - label: "Hide from Sitemap"
+        name: hide_from_sitemap
+        required: false
+        widget: "boolean"
+        default: false
+
       - label: "Navigation" # https://www.11ty.dev/docs/plugins/navigation/
         name: "eleventyNavigation"
         widget: "object"
