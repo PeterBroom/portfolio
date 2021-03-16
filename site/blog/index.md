@@ -8,7 +8,6 @@ tags:
   - blog
   - post
   - bloghomepage
-  - ""
 eleventyNavigation:
   key: Blog
   order: 3
