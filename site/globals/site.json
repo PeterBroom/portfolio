@@ -1,9 +1,9 @@
 {
-    "name": "Skeleventy",
+    "name": "Peter Broom Front-end Developer",
     "url": "https://petebroom.netlify.app",
     "author": {
-        "name": "Mill Burray",
-        "handle": "@joe_dyer1"
+        "name": "Peter Broom",
+        "handle": "@PeterBroom4"
     },
     "images": {
         "favicon": "/favicon.png",
@@ -13,7 +13,7 @@
         "og": "/images/meta/og.jpg"
     },
     "social_links": {
-        "github": "https://github.com/josephdyer/skeleventy",
-        "twitter": "https://twitter.com/joe_dyer1"
+        "github": "https://github.com/PeterBroom/portfolio",
+        "twitter": "https://twitter.com/PeterBroom4"
     }
 }
