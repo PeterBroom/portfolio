@@ -1,5 +1,6 @@
 {
-    "name": "Peter Broom Front-end Developer",
+    "name": "Peter Broom",
+    "tagline": "Front-end Developer",
     "url": "https://petebroom.netlify.app",
     "author": {
         "name": "Peter Broom",
@@ -14,6 +15,7 @@
     },
     "social_links": {
         "github": "https://github.com/PeterBroom/portfolio",
-        "twitter": "https://twitter.com/PeterBroom4"
+        "twitter": "https://twitter.com/PeterBroom4",
+        "linkedin": "https://linkedin.com/in/peterbroom/"
     }
 }

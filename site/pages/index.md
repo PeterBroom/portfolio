@@ -8,5 +8,9 @@ eleventyExcludeFromCollections: false
 eleventyNavigation:
   order: 0
   key: Home
-meta_description: asdfasdfadsfasdfasfasdfdfaasdfasdfasd
+meta_description: Peter Broom, a front-end web developer living in London.
 ---
+
+The last thing any developers get's round to is building their own website!
+
+So check back soon for more updates. Thanks for looking!
