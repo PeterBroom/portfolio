@@ -15,7 +15,7 @@ media_folder: "public/images/uploads"
 public_folder: "/images/uploads"
 media_library:
   name: cloudinary
-  output_filename_only: true
+  output_filename_only: false
   config:
     cloud_name: peterbroom
     api_key: 378533634851541
