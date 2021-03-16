@@ -92,7 +92,7 @@ collections:
           name: "layout",
           widget: "select",
           options:
-            - { label: "Blog index page", value: "blog" }
+            - { label: "Blog index page", value: "blog" },
             - { label: "Post", value: "post" },
           default: ["Post"]
         }
