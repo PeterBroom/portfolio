@@ -1,7 +1,7 @@
-const navigation = require('@11ty/eleventy-navigation')
-const dates = require('./utilities/filters/dates')
-const helpers = require('./utilities/filters/helpers')
-const searchFilter = require('./utilities/filters/search')
+const navigation = require('@11ty/eleventy-navigation');
+const dates = require('./utilities/filters/dates');
+const helpers = require('./utilities/filters/helpers');
+const searchFilter = require('./utilities/filters/search');
 const { srcset, src } = require('./utilities/shortcodes/shortcodes');
 
 const path = require('path')
@@ -10,27 +10,27 @@ module.exports = config => {
     config.addLayoutAlias('default', 'layouts/base.njk')
 
     // Global collection
-    config.addDataExtension('yaml', contents => yaml.safeLoad(contents))
+    config.addDataExtension('yaml', contents => yaml.safeLoad(contents));
     config.addDataExtension("yml", contents => yaml.load(contents));
 
-    // CDN
+    // CDN Shortcodes
     config.addNunjucksShortcode('src', src);
     config.addNunjucksShortcode('srcset', srcset);
 
     // navigation plugin
-    config.addPlugin(navigation)
+    config.addPlugin(navigation);
 
     // Human readable date for posts
-    config.addFilter('dateDisplay', dates.friendly)
+    config.addFilter('dateDisplay', dates.friendly);
 
     // Timestamp for datetime element
-    config.addFilter('timestamp', dates.timestamp)
+    config.addFilter('timestamp', dates.timestamp);
 
     // Search filter
     config.addFilter('search', searchFilter.search);
 
     // Remove whitespace from a string
-    config.addNunjucksFilter('spaceless', helpers.spaceless)
+    config.addNunjucksFilter('spaceless', helpers.spaceless);
 
     // Minify our HTML
     // config.addTransform('htmlminify', require('./utilities/transforms/htmlminify'))
@@ -55,7 +55,7 @@ module.exports = config => {
 
         }
 
-        return blogs.reverse()
+        return blogs.reverse();
 
     })
 
@@ -102,7 +102,7 @@ module.exports = config => {
         markdownTemplateEngine: 'njk',
         templateFormats:        ['md', 'njk'],
         htmlTemplateEngine:     'njk',
-        passtroughFileCopy:     true,
+        passthroughFileCopy:     true,
         dir: {
             input: 'site',
             output: 'public',
@@ -110,5 +110,4 @@ module.exports = config => {
             data: 'globals'
         }
     }
-
 }
