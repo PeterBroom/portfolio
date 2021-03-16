@@ -106,6 +106,7 @@ collections:
             output_filename_only: true
           }
         }
+      - { label: "Image alt text", name: "image_alt", widget: "string" }
       - { label: "Tags", name: "tags", widget: "list", default: ["blog", "post"] }
       - { label: "Body", name: "body", widget: "markdown", buttons: ["bold", "italic", "link", "heading-one", "heading-two", "heading-three", "heading-four", "quote", "bulleted-list", "numbered-list"] }
 
