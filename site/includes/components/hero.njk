@@ -1,6 +1,10 @@
 <header class="hero">
     <div class="hero__image">
-        {{block.image}}
+        <div>IMAGE:  {{block.image}}</div>
+
+        <div>SRC: {% src block.image %}</div>
+
+        {# {% srcset block.image %} #}
         <img src="{% src block.image %}"
             srcset="{% srcset block.image %}"
             {# sizes="{% defaultSizes %}" #}
