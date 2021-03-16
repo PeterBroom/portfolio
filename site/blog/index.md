@@ -4,10 +4,7 @@ robots: noindex,follow
 layout: blog
 date: 2021-03-16T14:26:20.725Z
 title: The blog
-tags:
-  - blog
-  - post
-  - bloghomepage
+
 eleventyNavigation:
   key: Blog
   order: 3
