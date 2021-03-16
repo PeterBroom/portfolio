@@ -91,10 +91,10 @@ collections:
           label: "Layout",
           name: "layout",
           widget: "select",
-          options: {
-            - { label: "Blog index page", value: "blog" },
-            - { label: "Post", value: "post" },
-          },
+          options: [
+            { label: "Blog index page", value: "blog" },
+            { label: "Post", value: "post" },
+          ],
           default: ["Post"]
         }
       - { label: "Publish Date", name: "date", widget: "datetime" }
