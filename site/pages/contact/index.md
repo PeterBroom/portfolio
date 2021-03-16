@@ -11,8 +11,8 @@ meta_description: The contact page
 meta_keywords:
   - get in touch
   - contact
+eleventyExcludeFromCollections: true
+hide_from_sitemap: true
+hide_from_robots: true
 meta_title: Contact
 ---
-
-
-
