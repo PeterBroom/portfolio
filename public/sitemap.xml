@@ -13,14 +13,6 @@
         <lastmod>2019-11-15</lastmod>
     </url>
     <url>
-        <loc>https://petebroom.netlify.app/search/</loc>
-        <lastmod>2021-03-12</lastmod>
-    </url>
-    <url>
-        <loc>https://petebroom.netlify.app/search-index.json</loc>
-        <lastmod>2021-03-12</lastmod>
-    </url>
-    <url>
         <loc>https://petebroom.netlify.app/hero-test/</loc>
         <lastmod>2021-03-15</lastmod>
     </url>
@@ -33,11 +25,19 @@
         <lastmod>2021-03-15</lastmod>
     </url>
     <url>
-        <loc>https://petebroom.netlify.app/about/</loc>
+        <loc>https://petebroom.netlify.app/guidance/new-guidance/</loc>
         <lastmod>2021-03-16</lastmod>
     </url>
     <url>
-        <loc>https://petebroom.netlify.app/guidance/index.htm</loc>
+        <loc>https://petebroom.netlify.app/blog/my-first-post-in-the-cms/</loc>
+        <lastmod>2021-03-16</lastmod>
+    </url>
+    <url>
+        <loc>https://petebroom.netlify.app/search-index.json</loc>
+        <lastmod>2021-03-16</lastmod>
+    </url>
+    <url>
+        <loc>https://petebroom.netlify.app/about/</loc>
         <lastmod>2021-03-16</lastmod>
     </url>
 </urlset>
