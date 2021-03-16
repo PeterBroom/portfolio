@@ -153,6 +153,29 @@ collections:
           searchFields: ["title"],
           displayFields: ["title"],
         }
+
+      - label: "Navigation" # https://www.11ty.dev/docs/plugins/navigation/
+        name: "eleventyNavigation"
+        widget: "object"
+        fields:
+          - { label: "Key", name: "key", widget: "string" }
+          - { label: "Order", name: "order", widget: "number", default: 0, hint: "Where you want this link to appear in the nav",}
+      - {
+          label: "Meta description",
+          name: "meta_description",
+          widget: "text",
+          required: true
+        }
+      - {
+          label: "Meta keywords",
+          name: "meta_keywords",
+          widget: list,
+          add_to_top: true,
+          minimize_collapsed: true,
+          required: true,
+          summary: '{{fields.name}}',
+          field: {label: "Enter a keyword", name: name, widget: string}
+        }
       - label: "Exclude from navigation"
         name: eleventyExcludeFromCollections
         required: false
@@ -168,29 +191,6 @@ collections:
         required: false
         widget: "boolean"
         default: false
-
-      - label: "Navigation" # https://www.11ty.dev/docs/plugins/navigation/
-        name: "eleventyNavigation"
-        widget: "object"
-        fields:
-          - { label: "Key", name: "key", widget: "string" }
-          - { label: "Order", name: "order", widget: "number", default: 0 }
-      - {
-          label: "Meta description",
-          name: "meta_description",
-          widget: "text",
-          required: true
-        }
-      - {
-          label: "Meta keywords",
-          name: "meta_keywords",
-          widget: list,
-          add_to_top: true,
-          minimize_collapsed: true,
-          required: true,
-          summary: '{{fields.name}}',
-          field: {label: Name, name: name, widget: string}
-        }
     meta:
       {
         path:
