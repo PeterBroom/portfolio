@@ -80,7 +80,7 @@ collections:
     label: "Blogs"
     label_singular: "Blog"
     title: Blog
-    folder: "site/blog"
+    folder: "site/blog/posts"
     create: true
     slug: "{{slug}}"
     identifier_field: name

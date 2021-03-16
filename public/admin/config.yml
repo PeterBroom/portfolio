@@ -76,6 +76,40 @@ collections:
               - { label: "Display Text", name: displayText, widget: string }
               - { label: URL, name: url, widget: string }
 
+  - name: "blog"
+    label: "Blogs"
+    label_singular: "Blog"
+    title: Blog
+    folder: "site/blog/posts"
+    create: true
+    slug: "{{slug}}"
+    identifier_field: name
+    editor:
+      preview: false
+    fields:
+      - {
+          label: "Layout",
+          name: "layout",
+          widget: "select",
+          options: [
+            { label: "Blog index page", value: "blog" },
+            { label: "Post", value: "post" },
+          ],
+          default: ["Post"]
+        }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Title", name: "title", widget: "string", required: true }
+      - { label: "Sub heading", name: "sub_heading", widget: "string", required: false }
+      - { label: "Image", name: post_image, widget: image,
+          media_library: {
+            name: cloudinary,
+            output_filename_only: true
+          }
+        }
+      - { label: "Image alt text", name: "image_alt", widget: "string" }
+      - { label: "Tags", name: "tags", widget: "list", default: ["blog", "post"] }
+      - { label: "Body", name: "body", widget: "markdown", buttons: ["bold", "italic", "link", "heading-one", "heading-two", "heading-three", "heading-four", "quote", "bulleted-list", "numbered-list"] }
+
   - name: "pages"
     label: "Pages"
     label_singular: "Page"
@@ -104,7 +138,7 @@ collections:
           hint: "Must be relative path (e.g. main/sub/index.html). Don't forget the .html extension",
         }
       - { label: "Title", name: "title", widget: "string", required: true }
-      - { label: "Sub heading", name: "sub_heading", widget: "string", required: true }
+      - { label: "Sub heading", name: "sub_heading", widget: "string", required: false }
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - label: "Content Blocks"
         label_singular: "Content Block"
@@ -153,17 +187,13 @@ collections:
           searchFields: ["title"],
           displayFields: ["title"],
         }
-      - label: "Exclude from navigation"
-        name: eleventyExcludeFromCollections
-        required: false
-        widget: "boolean"
-        default: false
+
       - label: "Navigation" # https://www.11ty.dev/docs/plugins/navigation/
         name: "eleventyNavigation"
         widget: "object"
         fields:
           - { label: "Key", name: "key", widget: "string" }
-          - { label: "Order", name: "order", widget: "number", default: 0 }
+          - { label: "Order", name: "order", widget: "number", default: 0, hint: "Where you want this link to appear in the nav",}
       - {
           label: "Meta description",
           name: "meta_description",
@@ -178,8 +208,23 @@ collections:
           minimize_collapsed: true,
           required: true,
           summary: '{{fields.name}}',
-          field: {label: Name, name: name, widget: string}
+          field: {label: "Enter a keyword", name: name, widget: string}
         }
+      - label: "Exclude from navigation"
+        name: eleventyExcludeFromCollections
+        required: false
+        widget: "boolean"
+        default: false
+      - label: "Hide from Sitemap"
+        name: hide_from_sitemap
+        required: false
+        widget: "boolean"
+        default: false
+      - label: "Hide from search engines"
+        name: hide_from_robots
+        required: false
+        widget: "boolean"
+        default: false
     meta:
       {
         path:
