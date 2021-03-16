@@ -5,14 +5,16 @@ const FALLBACK_WIDTHS = [ 300, 600, 680, 1360 ];
 const FALLBACK_WIDTH = 680;
 
 function getSrcset(file, widths) {
+  const fileName = file.split(['/','\\']).pop();
   const widthSet = widths ? widths : FALLBACK_WIDTHS
   return widthSet.map(width => {
-    return `${getSrc(file, width)} ${width}w`;
+    return `${getSrc(fileName, width)} ${width}w`;
   }).join(", ")
 }
 
 function getSrc(file, width) {
-  return `${BASE_URL}q_auto,f_auto,w_${width ? width : FALLBACK_WIDTH}/${FOLDER}/${file}`
+  const fileName = file.split(['/','\\']).pop();
+  return `${BASE_URL}q_auto,f_auto,w_${width ? width : FALLBACK_WIDTH}/${FOLDER}/${fileName}`
 }
 
 module.exports = {
