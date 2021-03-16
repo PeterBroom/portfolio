@@ -88,10 +88,13 @@ collections:
       preview: false
     fields:
       - {
-          label: "Layout", name: "layout", widget: "select",
+          label: "Layout",
+          name: "layout",
+          widget: "select",
           options:
             - { label: "Blog index page", value: "blog" }
             - { label: "Post", value: "post" }
+        }
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Title", name: "title", widget: "string", required: true }
       - { label: "Sub heading", name: "sub_heading", widget: "string", required: false }
