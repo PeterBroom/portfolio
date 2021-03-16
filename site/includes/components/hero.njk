@@ -1,13 +1,8 @@
 <header class="hero">
     <div class="hero__image">
-        <div>IMAGE:  {{block.image}}</div>
-
-        <div>SRC: {% src block.image %}</div>
-
-        {# {% srcset block.image %} #}
         <img src="{% src block.image %}"
             srcset="{% srcset block.image %}"
-            {# sizes="{% defaultSizes %}" #}
+            sizes="{{ block.sizes }}"
             alt="{{block.heading}} image"
             width="2953"
             height="2178"
