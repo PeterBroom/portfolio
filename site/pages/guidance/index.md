@@ -8,6 +8,7 @@ url:
   - contact/index
   - about/index
 eleventyExcludeFromCollections: false
+hide_from_sitemap: true
 eleventyNavigation:
   order: 0
   key: Guidance
