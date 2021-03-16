@@ -2,13 +2,8 @@
 layout: contact
 permalink: contact/index.html
 title: Get in touch
-sub_heading: We'd love to hear from you.
+sub_heading: It would be great to hear from you!
 date: 2021-03-15T16:18:02.213Z
-blocks:
-  - type: hero
-    heading: Contact hero test 2
-    image: https://res.cloudinary.com/peterbroom/image/upload/v1599782657/samples/cloudinary-group.jpg
-    content: Some contact info
 eleventyNavigation:
   key: Contact
   order: 4
@@ -19,6 +14,5 @@ meta_keywords:
 meta_title: Contact
 ---
 
-Simply fill out the form below and we'll gladly ignore it.
 
 
