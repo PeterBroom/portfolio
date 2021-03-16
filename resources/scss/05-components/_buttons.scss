@@ -10,8 +10,10 @@
     padding: get-size('300') get-size('500');
     transition: background-color v(transition-duration) v(transition-timing);
     @include apply-utility('weight', 'bold');
+    cursor: pointer;
 
     &:hover {
-        @include apply-utility('bg', 'white');
+        @include apply-utility('bg', 'black');
+        @include apply-utility('color', 'white');
     }
 }

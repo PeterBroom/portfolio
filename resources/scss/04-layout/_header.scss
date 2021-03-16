@@ -1,6 +1,10 @@
 
 //==========  Header  ==========//
 
+.header {
+    @include apply-utility('bg', 'black');
+}
+
 // logo
 .logo {
     --logo-size: #{get-size('500')};

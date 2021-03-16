@@ -1,11 +1,19 @@
 
 //========== Forms ==========//
 
+label {
+    display: block;
+    @include apply-utility('mb', '300');
+}
+
 .textarea,
 .input {
     border: 0;
     border-radius: v(border-radius);
     padding: 0 .5rem;
+    border-color: get-color('black');
+    border-width: 1px;
+    border-style: solid;
 }
 
 .input {
@@ -13,5 +21,5 @@
 }
 
 .textarea {
-    height: get-size('1100');
+    height: get-size('1100')*3;
 }
