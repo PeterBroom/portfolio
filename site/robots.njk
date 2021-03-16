@@ -1,0 +1,16 @@
+---
+permalink: robots.txt
+eleventyExcludeFromCollections: true
+hide_from_sitemap: true
+---
+
+User-agent: *
+Disallow:
+
+Sitemap: {{ site.url }}/sitemap.xml
+{% for page in collections.all -%}
+    {%- if page.data.hide_from_robots === true %}
+        {%- set disallowText = page.data.title + ': ' + site.url + page.url -%}
+        {{- disallowText -}}
+    {% endif -%}
+{%- endfor %}

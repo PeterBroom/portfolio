@@ -1,0 +1,20 @@
+<header class="hero">
+    <div class="hero__image">
+        <img src="{% src block.image %}"
+            srcset="{% srcset block.image %}"
+            sizes="{{ block.sizes }}"
+            alt="{{block.heading}} image"
+            width="2953"
+            height="2178"
+            loading="lazy"
+            class="super-great-style-class">
+    </div>
+    <div class="hero__content">
+        <h1>{{ block.heading }}</h1>
+        {% if block.content and block.content != '' %}
+            <div class="hero-inner">
+                {{ block.content }}
+            </div>
+        {% endif %}
+    </div>
+</header>

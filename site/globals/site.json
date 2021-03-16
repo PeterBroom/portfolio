@@ -1,0 +1,19 @@
+{
+    "name": "Peter Broom Front-end Developer",
+    "url": "https://petebroom.netlify.app",
+    "author": {
+        "name": "Peter Broom",
+        "handle": "@PeterBroom4"
+    },
+    "images": {
+        "favicon": "/favicon.png",
+        "favicon_svg": "/favicon.svg",
+        "apple_touch_icon": "/images/meta/apple-touch-icon.png",
+        "twitter": "/images/meta/twitter.jpg",
+        "og": "/images/meta/og.jpg"
+    },
+    "social_links": {
+        "github": "https://github.com/PeterBroom/portfolio",
+        "twitter": "https://twitter.com/PeterBroom4"
+    }
+}

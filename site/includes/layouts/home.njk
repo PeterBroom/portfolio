@@ -1,0 +1,35 @@
+---
+layout: base
+---
+
+<main id="main" class="main inner box-flex pt-800 pb-1100" tabindex="-1">
+
+    <header class="page-header">
+
+        <h1 class="page-title">{{ title }}</h1>
+
+        {% if sub_heading %}
+
+            <p class="sub-heading">{{ sub_heading }}</p>
+
+        {% endif %}
+
+    </header>
+
+    <div class="content flow">
+        <h2>image</h2>
+        <img src="{% src '0_xMaFF2hSXpf_kIfG_lrzhm1.jpg' %}"
+    srcset="{% srcset '0_xMaFF2hSXpf_kIfG_lrzhm1.jpg' %}"
+
+    alt="Test image"
+    width="2953"
+    height="2178"
+    loading="lazy"
+    class="super-great-style-class"
+  >
+
+        {{ content | safe }}
+
+    </div>
+
+</main>
