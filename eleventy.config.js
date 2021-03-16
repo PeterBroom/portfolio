@@ -76,7 +76,7 @@ module.exports = config => {
 
         return Array.from(list).sort()
 
-    })
+    });
 
     // Layout aliases
     config.addLayoutAlias('base', 'layouts/base.njk')
