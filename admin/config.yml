@@ -76,6 +76,30 @@ collections:
               - { label: "Display Text", name: displayText, widget: string }
               - { label: URL, name: url, widget: string }
 
+  - name: "blog"
+    label: "Blogs"
+    label_singular: "Blog"
+    title: Blog
+    folder: "site/blog"
+    create: true
+    slug: "{{slug}}"
+    identifier_field: name
+    editor:
+      preview: false
+    fields:
+      - { label: "Layout", name: "layout", widget: "hidden", default: "post" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Title", name: "title", widget: "string", required: true }
+      - { label: "Sub heading", name: "sub_heading", widget: "string", required: false }
+      - { label: "Image", name: post_image, widget: image,
+          media_library: {
+            name: cloudinary,
+            output_filename_only: true
+          }
+        }
+      - { label: "Tags", name: "tags", widget: "list", default: ["post"] }
+      - { label: "Body", name: "body", widget: "markdown" }
+
   - name: "pages"
     label: "Pages"
     label_singular: "Page"
