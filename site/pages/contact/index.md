@@ -1,6 +1,6 @@
 ---
 layout: contact
-tags: index
+tags: Get in touch
 permalink: contact/index.html
 title: Get in touch
 sub_heading: It would be great to hear from you!
