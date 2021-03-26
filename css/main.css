@@ -1020,6 +1020,7 @@ a:not([class]):hover {
 }
 .nav .link {
   position: relative;
+  height: 1.95rem;
   line-height: 1.95rem;
   color: #fff;
 }
