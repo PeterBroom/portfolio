@@ -1,10 +1,10 @@
 ---
 layout: page
+tags: Section one
 permalink: section-one-sub/index.html
 title: Section one sub
-sub_heading:
+sub_heading: null
 date: 2021-03-15T16:18:02.213Z
-tags: sectionOne
 eleventyNavigation:
   key: Section A I
   order: 4
