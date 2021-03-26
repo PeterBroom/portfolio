@@ -18,6 +18,20 @@ layout: base
 
         </header>
 
+        {% if collections[tags] %}
+            <aside>
+                <nav>
+                    <ul>
+                        {%- for item in collections[tags] -%}
+                            <li{% if item.url == page.url %} aria-current="page"{% endif %}>
+                                <a href="{{ item.url }}" {% if item.url == page.url %} class="active"{% endif %}>{{ item.data.title }}</a>
+                            </li>
+                        {%- endfor -%}
+                    </ul>
+                </nav>
+            </aside>
+        {% endif %}
+
         <div class="content flow">
             {% include "layouts/blocks.njk" %}
 

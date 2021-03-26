@@ -2,14 +2,14 @@ backend:
   # repo: https://github.com/PeterBroom/portfolio.git
   name: git-gateway
   branch: main
+  local_backend: true
   commit_messages:
     create: Create {{collection}} “{{slug}}”
     update: Update {{collection}} “{{slug}}”
     delete: Delete {{collection}} “{{slug}}”
     uploadMedia: Upload “{{path}}”
     deleteMedia: Delete “{{path}}”
-    openAuthoring: '{{message}}'
-local_backend: true
+    openAuthoring: "{{message}}"
 # publish_mode: editorial_workflow
 media_folder: "public/images/uploads"
 public_folder: "/images/uploads"
@@ -123,7 +123,7 @@ collections:
           minimize_collapsed: true,
           required: true,
           summary: '{{fields.name}}',
-          field: {label: "Enter a keyword", name: name, widget: string}
+          field: { label: "Enter a keyword", name: name, widget: string }
         }
   - name: "pages"
     label: "Pages"
@@ -144,6 +144,12 @@ collections:
           name: "layout",
           widget: "hidden",
           default: "page",
+        }
+      - { label: "Parent page", name: "tags",
+          widget: "relation",
+          collection: "pages",
+          search_fields: ["title"],
+          value_field: "{{slug}}"
         }
       - {
           label: "Permalink",
