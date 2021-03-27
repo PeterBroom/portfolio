@@ -145,6 +145,17 @@ collections:
           widget: "hidden",
           default: "page",
         }
+      - label: "Sub menu"
+        name: subNav
+        file: "site/globals/{{fields.title}}subNav.yml"
+        fields:
+          - label: "Nav Items"
+            label_singular: "Nav Item"
+            name: topLevelItems
+            widget: list
+            fields:
+              - { label: "Display Text", name: displayText, widget: string }
+              - { label: URL, name: url, widget: string }
       - {
           label: "Permalink",
           name: "permalink",
