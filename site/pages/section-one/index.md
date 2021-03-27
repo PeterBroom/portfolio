@@ -1,6 +1,7 @@
 ---
 layout: page
 tags: Section one
+level: 1
 permalink: section-one/index.html
 title: Section one
 sub_heading: null
