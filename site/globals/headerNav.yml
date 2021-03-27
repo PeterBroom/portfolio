@@ -1,0 +1,5 @@
+topLevelItems:
+  - displayText: Home
+    url: /
+  - displayText: Contact
+    url: /contact
