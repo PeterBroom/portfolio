@@ -1,0 +1,12 @@
+<menu class="main-menu">
+    <nav class="main-nav" aria-label="Main">
+        {% set headerNav = headerNav.topLevelItems %}
+        <ul class="main-nav__list">
+            {% for item in headerNav %}
+                <li class="main-nav__item">
+                    <a class="color-white main-nav__link{{ ' active' if item.url === page.url }}" href="{{ item.url }}" {{ 'aria-current=page' if item.url === page.url }}>{{ item.displayText }}</a>
+                </li>
+            {% endfor %}
+        </ul>
+    </nav>
+</menu>

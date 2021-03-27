@@ -1,3 +1,4 @@
+const yaml = require("js-yaml");
 const navigation = require('@11ty/eleventy-navigation');
 const dates = require('./utilities/filters/dates');
 const helpers = require('./utilities/filters/helpers');

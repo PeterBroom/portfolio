@@ -26,7 +26,7 @@ collections:
     files:
       - label: "Globals"
         name: headerGlobals
-        file: "_data/headerGlobals.yml"
+        file: "site/globals/headerGlobals.yml"
         fields:
           - label: "Site title"
             name: "siteTitle"
@@ -36,7 +36,7 @@ collections:
             field: {label: Name, name: name, widget: string}
       - label: "Meta data"
         name: headerMeta
-        file: "_data/headerMeta.yml"
+        file: "site/globals/headerMeta.yml"
         fields:
           - label: "Meta description"
             name: "description"
@@ -54,7 +54,7 @@ collections:
 
       - label: "Navigation Menu"
         name: headerNav
-        file: "_data/headerNav.yml"
+        file: "site/globals/headerNav.yml"
         fields:
           - label: "Nav Items"
             label_singular: "Nav Item"
@@ -66,7 +66,7 @@ collections:
 
       - label: "Footer Menu"
         name: footerNav
-        file: "_data/footerNav.yml"
+        file: "site/globals/footerNav.yml"
         fields:
           - label: "Nav Items"
             label_singular: "Nav Item"
@@ -144,12 +144,6 @@ collections:
           name: "layout",
           widget: "hidden",
           default: "page",
-        }
-      - { label: "Parent page", name: "tags",
-          widget: "relation",
-          collection: "pages",
-          search_fields: ["title"],
-          value_field: "title"
         }
       - {
           label: "Permalink",
