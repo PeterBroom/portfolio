@@ -9,6 +9,8 @@ const path = require('path')
 module.exports = config => {
     config.addLayoutAlias('default', 'layouts/base.njk')
 
+    // config.setDataDeepMerge(true);
+
     // Global collection
     config.addDataExtension('yaml', contents => yaml.safeLoad(contents));
     config.addDataExtension("yml", contents => yaml.load(contents));
