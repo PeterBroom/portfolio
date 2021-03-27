@@ -1,42 +1,22 @@
 ---
 layout: base
 ---
-
 <main id="main" class="main inner box-flex pt-600 pb-1100" tabindex="-1">
 
     <article id="container-centre" class="column centre">
 
         <header class="page-header">
-
             <h1 class="page-title">{{ title }}</h1>
-
             {% if sub_heading %}
-
                 <p class="sub-heading">{{ sub_heading }}</p>
-
             {% endif %}
-
         </header>
 
-        {% if collections[tags] %}
-            <aside>
-                <nav>
-                    <ul>
-                        {%- for item in collections[tags] -%}
-                            <li{% if item.url == page.url %} aria-current="page"{% endif %}>
-                                <a href="{{ item.url }}" {% if item.url == page.url %} class="active"{% endif %}>{{ item.data.title }}</a>
-                            </li>
-                        {%- endfor -%}
-                    </ul>
-                </nav>
-            </aside>
-        {% endif %}
+        {% include "components/sub-nav.njk" %}
 
         <div class="content flow">
             {% include "layouts/blocks.njk" %}
-
             {{ content | safe }}
-
         </div>
 
     </article>

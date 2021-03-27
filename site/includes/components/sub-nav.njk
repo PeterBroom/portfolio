@@ -1,0 +1,67 @@
+---
+pagination:
+ data: globalDataSet.myData
+ size: 1
+ alias: submenu
+---
+{{submenu}}
+<p>Sub nav</p>
+<ol>
+    {%- for item in submenu %}
+        <li>{{ item }}</li>
+    {% endfor -%}
+</ol>
+{# <p>tags: {{tags}}</p>
+<p>childof: {{childOf}}</p>
+
+<pre>Page: {{ page.data | dump(2) }}</pre>
+
+{% if collections[tags] %}
+    <menu class="sub-navigation">
+        <nav>
+            <ul>
+                {%- for item in collections[tags] -%}
+                    <li {{ 'aria-current=page' if item.url === page.url }}>
+                        <a href="{{ item.url }}" {{ 'class=active' if item.url === page.url }}>{{ item.data.title }}</a>
+
+                        {% if childOf %}
+                            <ul>
+                                {%- for item in collections[tags] -%}
+                            test
+                            {%- endfor -%}
+                            </ul>
+                        {% endif %}
+                    </li>
+                {%- endfor -%}
+            </ul>
+        </nav>
+    </menu>
+{% endif %} #}
+{# <nav>
+    {% set level = 0 %}
+    {% set collectionLength = collections[tags] | length %}
+
+    {%- for page in collections[tags] -%}
+        {% set ulCount = (page.data.level - level) | abs %}
+        {%- for i in range(0, ulCount) -%}
+            {%- if page.data.level > level -%}
+                <ul>
+                    <li>
+                        <a href="{{ page.url }}">
+                            {{ page.data.title }}
+                        </a>
+
+                    {% else %}
+                    </li>
+                </ul>
+            {%- endif -%}
+
+        {%- endfor -%}
+        {% set level = page.level %}
+
+    {%- endfor -%}
+
+    {%- for i in range(0, level) -%}
+</ul>
+{%- endfor -%}
+</nav> #}
