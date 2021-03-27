@@ -145,7 +145,17 @@ collections:
           widget: "hidden",
           default: "page",
         }
-      - { label: "Parent page", name: "tags",
+      - { label: "Belongs to...",
+          hint: "Which section of the site does this page belong to?",
+          name: "belongsTo",
+          widget: "relation",
+          collection: "pages",
+          search_fields: ["title"],
+          value_field: "title"
+        }
+      - { label: "Child page of...",
+          hint: "Which page is this a child of?",
+          name: "childOf",
           widget: "relation",
           collection: "pages",
           search_fields: ["title"],
