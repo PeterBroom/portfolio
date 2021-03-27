@@ -1,7 +1,6 @@
 ---
 layout: page
-tags: Section one
-level: 1
+subNav: asdfasdf
 permalink: section-one/index.html
 title: Section one
 sub_heading: null
@@ -15,5 +14,7 @@ meta_keywords:
 eleventyExcludeFromCollections: false
 hide_from_sitemap: true
 hide_from_robots: true
+level: 1
+tags: Section one
 meta_title: Section one
 ---
