@@ -89,16 +89,16 @@ collections:
                 name: menuItems
                 widget: list
                 fields:
-                  - { label: "Page",
-                      name: url,
-                      widget: relation,
-                      required: false,
-                      multiple: true,
-                      collection: pages,
-                      valueField: "{{slug}}",
-                      searchFields: ["title"],
-                      displayFields: ["title"]
-                    }
+                  - label: "Page"
+                    name: url
+                    widget: relation
+                    required: false
+                    multiple: true
+                    collection: pages
+                    valueField: "{{slug}}"
+                    searchFields: ["title"]
+                    displayFields: ["title"]
+
 
 
       - label: "Footer Menu"
