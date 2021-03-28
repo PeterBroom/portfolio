@@ -71,11 +71,11 @@ collections:
           label: "Sub Menus"
           label_singular: "Sub menu"
           name: menu
-          widget: object
+          widget: list
           fields:
             - { label: "Menu title", name: "menuTitle", widget: string }
-            - {
-                label: "Belongs to",
+            - { label: "Belongs to",
+                hint: "Define a section/homepage this menu will belong to",
                 name: "belongsTo",
                 widget: relation,
                 required: false,
@@ -85,14 +85,22 @@ collections:
                 searchFields: ["title"],
                 displayFields: ["title"]
               }
-            - {
-              label: "Nav Items",
-              label_singular: "Nav Item",
-              name: topLevelItems,
-              widget: list,
-              fields:
-                - { label: "Display Text", name: displayText, widget: string },
-                - { label: URL, name: url, widget: string }
+            - { label: "Nav Items",
+                label_singular: "Nav Item",
+                name: topLevelItems,
+                widget: list,
+                fields:
+                  - { label: "Display Text", name: displayText, widget: string }
+                  - { label: "Page",
+                      name: url,
+                      widget: relation,
+                      required: false,
+                      multiple: true,
+                      collection: pages,
+                      valueField: "{{slug}}",
+                      searchFields: ["title"],
+                      displayFields: ["title"]
+                    }
               }
 
       - label: "Footer Menu"
