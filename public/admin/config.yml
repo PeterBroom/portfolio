@@ -85,20 +85,23 @@ collections:
                   searchFields: ["title"],
                   displayFields: ["title"]
                 }
-            # - label: "Nav Items",
-            #     label_singular: "Nav Item"
-            #     name: menuItems
-            #     widget: list
-            #     fields:
-            #       - label: "Page"
-            #         name: url
-            #         widget: relation
-            #         required: false
-            #         multiple: true
-            #         collection: pages
-            #         valueField: "{{slug}}"
-            #         searchFields: ["title"]
-            #         displayFields: ["title"]
+              - { label: "Nav Items",
+                  label_singular: "Nav Item",
+                  name: menuItems,
+                  widget: list,
+                  fields:
+                    - {
+                      label: "Page",
+                      name: url,
+                      widget: relation,
+                      required: false,
+                      multiple: true,
+                      collection: pages,
+                      valueField: "{{slug}}",
+                      searchFields: ["title"],
+                      displayFields: ["title"]
+                    }
+                }
 
       - label: "Footer Menu"
         name: footerNav
