@@ -84,7 +84,7 @@ collections:
                   valueField: "{{slug}}",
                   searchFields: ["title"],
                   displayFields: ["title"]
-            }
+                }
             # - label: "Nav Items",
             #     label_singular: "Nav Item"
             #     name: menuItems
