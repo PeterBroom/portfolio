@@ -73,22 +73,21 @@ collections:
           name: menu
           widget: list
           fields:
-            - { label: "Menu title", name: "menuTitle", widget: string }
-            - { label: "Belongs to",
-                hint: "Define a section/homepage this menu will belong to",
-                name: "belongsTo",
-                widget: relation,
-                required: false,
-                multiple: true,
-                collection: pages,
-                valueField: "{{slug}}",
-                searchFields: ["title"],
+            - label: "Menu title" name: "menuTitle" widget: string
+            - label: "Belongs to"
+                hint: "Define a section/homepage this menu will belong to"
+                name: "belongsTo"
+                widget: relation
+                required: false
+                multiple: true
+                collection: pages
+                valueField: "{{slug}}"
+                searchFields: ["title"]
                 displayFields: ["title"]
-              }
-            - { label: "Nav Items",
-                label_singular: "Nav Item",
-                name: topLevelItems,
-                widget: list,
+            - label: "Nav Items",
+                label_singular: "Nav Item"
+                name: menuItems
+                widget: list
                 fields:
                   - { label: "Page",
                       name: url,
@@ -100,7 +99,7 @@ collections:
                       searchFields: ["title"],
                       displayFields: ["title"]
                     }
-              }
+
 
       - label: "Footer Menu"
         name: footerNav
