@@ -90,7 +90,6 @@ collections:
                 name: topLevelItems,
                 widget: list,
                 fields:
-                  - { label: "Display Text", name: displayText, widget: string }
                   - { label: "Page",
                       name: url,
                       widget: relation,
