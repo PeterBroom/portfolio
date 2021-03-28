@@ -64,6 +64,37 @@ collections:
               - { label: "Display Text", name: displayText, widget: string }
               - { label: URL, name: url, widget: string }
 
+      - label: "Sub Menus"
+        name: subMenus
+        file: "site/globals/subMenus.yml"
+        fields:
+          label: "Sub Menus"
+          label_singular: "Sub menu"
+          name: menu
+          widget: object
+            fields:
+              - { label: "Menu title", name: "menuTitle", widget: string }
+              - {
+                  label: "Belongs to",
+                  name: "belongsTo",
+                  widget: relation,
+                  required: false,
+                  multiple: true,
+                  collection: pages,
+                  valueField: "{{slug}}",
+                  searchFields: ["title"],
+                  displayFields: ["title"]
+                }
+              - {
+                label: "Nav Items",
+                label_singular: "Nav Item",
+                name: topLevelItems,
+                widget: list,
+                fields:
+                  - label: "Display Text", name: displayText, widget: string
+                  - label: URL, name: url, widget: string
+                }
+
       - label: "Footer Menu"
         name: footerNav
         file: "site/globals/footerNav.yml"
@@ -145,17 +176,6 @@ collections:
           widget: "hidden",
           default: "page",
         }
-      - label: "Sub menu"
-        name: subNav
-        file: "site/globals/nav/nav-{{fields.slug}}.yml"
-        fields:
-          - label: "Nav Items"
-            label_singular: "Nav Item"
-            name: topLevelItems
-            widget: list
-            fields:
-              - { label: "Display Text", name: displayText, widget: string }
-              - { label: URL, name: url, widget: string }
       - {
           label: "Permalink",
           name: "permalink",
