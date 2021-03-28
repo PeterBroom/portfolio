@@ -68,22 +68,23 @@ collections:
         name: subMenus
         file: "site/globals/subMenus.yml"
         fields:
-          label: "Sub Menus"
-          label_singular: "Sub menu"
-          name: menu
-          widget: list
-          fields:
-            - { label: "Menu title", name: "menuTitle", widget: string }
-            # - label: "Belongs to"
-            #     hint: "Define a section/homepage this menu will belong to"
-            #     name: "belongsTo"
-            #     widget: relation
-            #     required: false
-            #     multiple: true
-            #     collection: pages
-            #     valueField: "{{slug}}"
-            #     searchFields: ["title"]
-            #     displayFields: ["title"]
+          - label: "Sub Menus"
+            label_singular: "Sub menu"
+            name: menu
+            widget: list
+            fields:
+              - { label: "Menu title", name: "menuTitle", widget: string }
+              - { label: "Belongs to",
+                  hint: "Define a section/homepage this menu will belong to",
+                  name: "belongsTo",
+                  widget: relation,
+                  required: false,
+                  multiple: true,
+                  collection: pages,
+                  valueField: "{{slug}}",
+                  searchFields: ["title"],
+                  displayFields: ["title"]
+            }
             # - label: "Nav Items",
             #     label_singular: "Nav Item"
             #     name: menuItems
