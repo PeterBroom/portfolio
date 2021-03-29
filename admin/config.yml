@@ -99,7 +99,7 @@ collections:
                         valueField: "{{slug}}",
                         searchFields: ["title"],
                         displayFields: ["title"]
-                    }
+                    },
                 }
 
       - label: "Footer Menu"
