@@ -78,7 +78,7 @@ collections:
                   hint: "Define a section/homepage this menu will belong to",
                   name: "belongsTo",
                   widget: relation,
-                  required: false,
+                  required: true,
                   multiple: true,
                   collection: pages,
                   valueField: "{{slug}}",
@@ -88,8 +88,8 @@ collections:
               - { label: "Nav Items",
                   label_singular: "Nav Item",
                   name: menuItems,
-                  widget: relation,
-                  fields:
+                  widget: list,
+                  types:
                     - { label: "Page",
                         name: url,
                         widget: relation,
