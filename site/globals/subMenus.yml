@@ -1,7 +1,7 @@
 menu:
   - menuTitle: My sub menu
     belongsTo:
-      - section-one/index
+      - Section one
     menuItems:
       - url:
           - section-one/section-one-sub/index
