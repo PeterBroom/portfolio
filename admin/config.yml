@@ -85,11 +85,11 @@ collections:
                   searchFields: ["title"],
                   displayFields: ["title"]
                 }
-              - label: "Nav Items"
-                label_singular: "Nav Item"
+              - label: "Menu Items"
+                label_singular: "Menu Item"
                 name: menuItems
                 widget: list
-                types:
+                fields:
                   - label: "Page"
                     name: url
                     widget: relation
@@ -99,8 +99,6 @@ collections:
                     valueField: "{{slug}}"
                     searchFields: ["title"]
                     displayFields: ["title"]
-
-
 
       - label: "Footer Menu"
         name: footerNav
