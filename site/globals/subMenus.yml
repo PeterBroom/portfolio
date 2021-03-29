@@ -2,3 +2,8 @@ menu:
   - menuTitle: My sub menu
     belongsTo:
       - section-one/index
+    menuItems:
+      - url:
+          - section-one/section-one-sub/index
+      - url:
+          - section-one/section-one-sub-two/index
