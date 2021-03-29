@@ -1,0 +1,4 @@
+menu:
+  - menuTitle: MY sub menu
+    belongsTo:
+      - section-one/index
