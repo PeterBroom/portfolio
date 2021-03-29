@@ -81,7 +81,7 @@ collections:
                   required: true,
                   multiple: true,
                   collection: pages,
-                  valueField: "{{slug}}",
+                  valueField: "{{title}}",
                   searchFields: ["title"],
                   displayFields: ["title"]
                 }
@@ -90,7 +90,11 @@ collections:
                 name: menuItems
                 widget: list
                 fields:
-                  - label: "Page"
+                  - label: "Page title"
+                    name: title
+                    widget: string
+                    required: true
+                  - label: "Page to link to"
                     name: url
                     widget: relation
                     required: true
