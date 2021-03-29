@@ -1,20 +1,25 @@
----
-pagination:
- data: globalDataSet.myData
- size: 1
- alias: submenu
----
-{{submenu}}
-<p>Sub nav</p>
-<ol>
-    {%- for item in submenu %}
-        <li>{{ item }}</li>
-    {% endfor -%}
-</ol>
-{# <p>tags: {{tags}}</p>
-<p>childof: {{childOf}}</p>
+{% set target = page.url + 'index' %}
+<pre>subMenus: {{ subMenus | dump(2)  }}</pre>
 
-<pre>Page: {{ page.data | dump(2) }}</pre>
+{% set subMenu = subMenus.menu %}
+
+{%- for items in subMenu -%}
+    <menu title="{{items.menuTitle}} sub menu">
+        {%- if items.belongsTo == title -%}
+            <nav>
+                <ul>
+                    {%- for items in items.menuItems -%}
+                        <li>
+                            <a href="/{{ items.url }}">{{ items.title }}</a>
+                        </li>
+                    {%- endfor -%}
+                </ul>
+            </nav>
+        {% endif %}
+    </menu>
+{%- endfor -%}
+
+{#
 
 {% if collections[tags] %}
     <menu class="sub-navigation">
