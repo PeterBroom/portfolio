@@ -5,5 +5,7 @@ menu:
     menuItems:
       - url:
           - section-one/section-one-sub/index
+        title: Section one sub
       - url:
           - section-one/section-one-sub-two/index
+        title: Section one sub two
